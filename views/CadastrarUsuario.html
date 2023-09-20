@@ -2,19 +2,19 @@
 <html lang="pt-br">
 
 <head>
-  <title> Login de Usuario </title>
+  <title> Cadastro de Usuario </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,
   initial-scale=1, shrink-to-fit=no">
-  <link href="views/css/bootstrap/bootstrap.css" rel="stylesheet">
-  <link href="views/css/style.css" rel="stylesheet">
+  <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <nav class="navbar bg-dark-subtle">
       <div class="container-fluid">
-        <img class="logo-empresa" src="views/img/lighting.png">  </a>
+        <img class="logo-empresa" src="img/lighting.png">  </a>
         <h1 class="nome-empresa ">Empresa Placeholder</h1>
       </div>
     </nav>
@@ -22,10 +22,18 @@
   <main>
     <div class="page">
       <form method="POST" class="formLogin">
-          <h1>Login</h1>
-          <p>Digite os seus dados de acesso no campo abaixo.</p>
+          <h1>Cadastro</h1>
+          <p>Digite os dados de acesso no campo abaixo.</p>
+          <label for="name"> Nome </label>
+          <input type="name" placeholder="Digite o nome" autofocus="true" />
           <label for="email"> Nº Registro </label>
           <input type="email" placeholder="Digite seu número de registro" autofocus="true" />
+          <label for="email"> Email </label>
+          <input type="email" placeholder="Digite seu email" autofocus="true" />
+          <label for="number"> Numero </label>
+          <input type="number" placeholder="Digite seu número celular" autofocus="true" />
+          <label for="email"> Endereço </label>
+          <input type="email" placeholder="Digite o endereço" autofocus="true" />
           <label for="password">Senha</label>  
           <input type="password" placeholder="Digite sua senha" />
           <input type="submit" value="Acessar" class="btn" />
@@ -44,7 +52,7 @@
     </div>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
-  <script src="views/js/bootstrap/bootstrap.js"></script>
+  <script src="js/bootstrap/bootstrap.js"></script>
 </body>
 
 </html>
