@@ -2,34 +2,31 @@
 <html lang="pt-br">
 
 <head>
-  <title> Login de Usuario </title>
+  <title> Menu </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,
   initial-scale=1, shrink-to-fit=no">
-  <link href="views/css/bootstrap/bootstrap.css" rel="stylesheet">
-  <link href="views/css/style.css" rel="stylesheet">
+  <link href="/views/css/bootstrap/bootstrap.css" rel="stylesheet">
+  <link href="/views/css/style.css" rel="stylesheet">
 </head>
 
 <body class="background-page">
   <header>
-    <nav class="navbar bg-dark-subtle">
+    <nav class="navbar bg-white">
       <div class="container-fluid">
-        <img class="logo-empresa" src="views/img/lighting.png">  </a>
+        <img class="logo-empresa" src="/views/img/lighting.png">  </a>
         <h1 class="nome-empresa ">Empresa Placeholder</h1>
       </div>
     </nav>
   </header>
   <main>
-    <div class="page">
-      <form method="POST" class="formLogin">
-          <h1>Login</h1>
-          <p>Digite os seus dados de acesso no campo abaixo.</p>
-          <label for="email"> Nº Registro </label>
-          <input type="email" placeholder="Digite seu número de registro" autofocus="true" />
-          <label for="password">Senha</label>  
-          <input type="password" placeholder="Digite sua senha" />
-          <input type="submit" value="Acessar" class="btn" />
-      </form>
+    <div class="d-flex align-items-center p-4 flex-column">
+      <button class="botao-menu text-nowrap"> Manusear Patrimônio </button>
+      <button class="botao-menu text-nowrap"> Cadastrar Fornecedor/Fabricante </button>
+      <button class="botao-menu text-nowrap"> Manusear Usuarios </button>
+      <button class="botao-menu text-nowrap"> Relatórios </button>
+      <button class="botao-menu text-nowrap"> Notificações </button>
+      <button class="botao-menu text-nowrap"> Sair </button>
     </div>
   </main>
   <footer class= "footer">
