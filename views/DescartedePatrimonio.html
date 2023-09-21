@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <title> Cadastro de Usuario </title>
+  <title> Descarte e Baixa de patrimonio </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,
   initial-scale=1, shrink-to-fit=no">
@@ -18,28 +18,22 @@
         <h1 class="nome-empresa"> EMPRESA PLACEHOLDER </h1>
       </div>
       <div class="header-right">
-        <a href="MainMenu.html" class="retorno-header"> RETORNAR </a>
+        <a href="GerenciamentoPatrimonio.html" class="retorno-header"> RETORNAR </a>
       </div>
     </div>
   </header>
   <main>
-    <div class="pagelistar">
+    <div class="page">
       <form method="POST" class="formLogin">
-          <h1>Cadastro</h1>
-          <p>Digite os dados de acesso no campo abaixo.</p>
+          <h1>Descarte e Baixa de Patrimonio</h1>
+          <p>Digite os dados de patrimonio no campo abaixo.</p>
           <label for="name"> Nome </label>
           <input type="name" placeholder="Digite o nome" autofocus="true" />
-          <label for="email"> Nº Registro </label>
-          <input type="email" placeholder="Digite seu número de registro" autofocus="true" />
-          <label for="email"> Email </label>
-          <input type="email" placeholder="Digite seu email" autofocus="true" />
-          <label for="number"> Numero </label>
-          <input type="number" placeholder="Digite seu número celular" autofocus="true" />
-          <label for="email"> Endereço </label>
-          <input type="email" placeholder="Digite o endereço" autofocus="true" />
-          <label for="password">Senha</label>  
-          <input type="password" placeholder="Digite sua senha" />
-          <input type="submit" value="Acessar" class="btn" />
+          <label for="number"> N° de Serie </label>
+          <input type="email" placeholder="Digite o numero de serie" autofocus="true" />
+          <form action="GerarNumeros.html">
+          <input type="submit" value="Descartar" class="btn" />
+        </form>
       </form>
     </div>
   </main>

@@ -12,15 +12,18 @@
 
 <body>
   <header>
-    <nav class="navbar bg-dark-subtle">
-      <div class="container-fluid">
-        <img class="logo-empresa" src="img/lighting.png">  </a>
-        <h1 class="nome-empresa ">Empresa Placeholder</h1>
+    <div class="header">
+      <div class="header-left">
+        <img src="img/lighting.png" class="logo-empresa">
+        <h1 class="nome-empresa"> EMPRESA PLACEHOLDER </h1>
       </div>
-    </nav>
+      <div class="header-right">
+        <a href="MainMenu.html" class="retorno-header"> RETORNAR </a>
+      </div>
+    </div>
   </header>
   <main>
-    <div class="page">
+    <div class="pagelistar">
       <form method="POST" class="formLogin">
           <h1>Cadastro Patrimonio</h1>
           <p>Digite os dados de patrimonio no campo abaixo.</p>
@@ -32,8 +35,8 @@
           <input type="date" placeholder="Digite a data de aquisição" autofocus="true" />
           <label for="number"> Valor </label>
           <input type="number" placeholder="Digite o preço" autofocus="true" />
-          <label for="email"> Descrição </label>
-          <input type="email" placeholder="Digite uma descrição" autofocus="true" />
+          <label for="email"> Quantidade </label>
+          <input type="email" placeholder="Digite a quantidade" autofocus="true" />
           <form action="GerarNumeros.html">
           <input type="submit" value="Cadastrar" class="btn" />
         </form>

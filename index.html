@@ -21,14 +21,15 @@
   </header>
   <main>
     <div class="page">
-      <form method="POST" class="formLogin">
+      <form method="POST" class="formLogin" action="views/MainMenu.html" method="get">
           <h1>Login</h1>
           <p>Digite os seus dados de acesso no campo abaixo.</p>
           <label for="email"> Nº Registro </label>
           <input type="email" placeholder="Digite seu número de registro" autofocus="true" />
           <label for="password">Senha</label>  
           <input type="password" placeholder="Digite sua senha" />
-          <input type="submit" value="Acessar" class="btn" />
+    <input type="submit" value="Fazer Login" 
+         name="Submit" id="frm1_submit" />
       </form>
     </div>
   </main>
