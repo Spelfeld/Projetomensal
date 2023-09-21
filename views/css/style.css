@@ -1,24 +1,135 @@
-.logo-empresa {
-  width: 5%;
-  margin-left: 10%;
+img { width: 100%; height: auto;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+}
+
+.tabela {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+}
+
+.tabela td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tabela tr:hover {background-color: #ddd;}
+
+.tabela th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #efa135;
+  color: white;
+  border: 1px solid rgb(106, 106, 106);
+}
+
+.titulo-relatorio {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT',
+  Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+  display: flex;
+  overflow: auto;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  flex-direction: row;
+  min-width: 0;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.botao-menu {
+  font: bold 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT',
+   Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #efa135;
+  color: black;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid rgb(164, 164, 164);
+  border-right: 1px solid rgb(140, 140, 140);
+  border-bottom: 1px solid rgb(140, 140, 140);
+  border-left: 1px solid rgb(164, 164, 164);
+  width: 250px;
+  height: 50px;
+  margin: 3px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-menu:active {
+  border-bottom-color: rgb(164, 164, 164);
+  border-right-color: rgb(164, 164, 164);
+  border-top-color: rgb(140, 140, 140);
+  border-left-color: rgba(140, 140, 140);
+}
+
+
+.header-left {
+  display: flex;
+  flex: 1;
+  min-width: 0;
 }
 
 .nome-empresa {
   flex: 1;
-  margin-left: 5%;
-  font-size: 2rem;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family: 'Gill Sans', 
+  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 100px;
+}
+
+.logo-empresa {
+  height: 50px;
+  width: 50px;
+  margin-left: 80px;
+}
+
+.header-right {
+  float: right;
+}
+
+.retorno-header {
+  font-family: 'Gill Sans',
+  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  text-decoration: none;
+  margin-right: 100px;
 }
 
 .footer {
-  display: flex;
   background-color: rgb(20, 20, 20);
   color: white;
-  padding: 5%;
+  padding: 10%;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
-  flex: 1;
   text-align: center;
 }
 
@@ -99,4 +210,12 @@
 .btn:hover {
   transform: scale(1.05);
   background-color: #e6d1a8;
+}
+
+.botao-menu:hover {
+  background-color: #ffba2f;
+}
+
+.background-page{
+  background-color: rgb(173, 173, 173);
 }
