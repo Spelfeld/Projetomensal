@@ -20,7 +20,7 @@ body {
   border: 1px solid black;
 }
 
-.tabela td, #customers th {
+.tabela td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
