@@ -1,18 +1,24 @@
-html {height:100%} 
+img {
+  width: 100%;
+  height: auto;
+}
+html {
+  height: 100%;
+}
 
-body{
+body {
   background-color: rgba(18, 18, 18, 0.724);
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100%;
   flex: 1;
 }
-.page{
-  display:flex;
+.page {
+  display: flex;
   justify-content: center;
 }
-.pagelistar{
-  display:flex;
+.pagelistar {
+  display: flex;
   justify-content: center;
   align-items: center; /* Isso centralizará verticalmente a tabela */
   height: 100vh; /* Isso garante que a tabela ocupe toda a altura da viewport */
@@ -27,7 +33,7 @@ body{
   flex: 1;
   margin-left: 100px;
   font-size: 2rem;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .footer {
@@ -52,7 +58,6 @@ body{
   padding: 40px;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
   gap: 5px;
-  
 }
 
 .areaLogin img {
@@ -85,14 +90,13 @@ body{
   width: 600px;
 }
 
-
 .formLogin input:focus {
   border: 1px solid #267bf1;
 }
 
 .formLogin label {
   font-size: 14px;
-  width:200px;
+  width: 200px;
   font-weight: 600;
   display: inline-block;
 }
@@ -128,22 +132,23 @@ body{
 }
 
 table {
-  border-collapse: collapse!important;
-  width: 100%!important;
-  border: 2px solid!important;
-  margin: 0 auto!important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  border: 2px solid !important;
+  margin: 0 auto !important;
 }
 
-th, td {
+th,
+td {
   text-align: left !important;
   padding: 8px !important;
   height: 20px !important;
-  width: 200px!important;
+  width: 200px !important;
 }
 
 th {
-  background-color: #efa135!important;
-  color: white!important;
+  background-color: #efa135 !important;
+  color: white !important;
 }
 
 .header {
@@ -166,8 +171,7 @@ th {
 }
 
 .retorno-header {
-  font-family: 'Gill Sans',
-  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: black;
   text-decoration: none;
   margin-right: 100px;
@@ -175,8 +179,7 @@ th {
 
 .botao-menu {
   font: bold 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT',
-   Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-decoration: none;
   border-radius: 5px;
   background-color: #efa135;
@@ -205,11 +208,11 @@ th {
   background-color: #ffba2f;
 }
 
-.background-page{
+.background-page {
   background-color: rgb(173, 173, 173);
   justify-content: center;
-  align-items: center; /* Isso centralizará verticalmente a tabela */
-  height: 400px; /* Isso garante que a tabela ocupe toda a altura da viewport */
+  align-items: center;
+  height: 400px;
 }
 
 .botoes {
@@ -218,4 +221,78 @@ th {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.tabela {
+  font-family: Arial, Helvetica, sans-serif !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  align-items: center !important;
+  align-self: center !important;
+  justify-content: center !important;
+  width: 1000px !important;
+  margin: auto !important;
+  margin-top: 20px !important;
+  margin-bottom: 50px !important;
+  border: 1px solid black !important;
+}
+
+.tabela td,
+th {
+  border: 1px solid #ddd !important;
+  padding: 8px !important;
+}
+
+.tabela tr:hover {
+  background-color: #ddd !important;
+}
+
+.tabela th {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  text-align: left !important;
+  background-color: #efa135 !important;
+  color: white !important;
+  border: 1px solid rgb(106, 106, 106) !important;
+}
+
+.titulo-relatorio {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.logo-perfil {
+  width: 4%;
+  margin-left: 92%;
+  align-items: center;
+}
+
+.logo-usuario {
+  width: 99px;
+}
+
+.content {
+  height: 450px; /* Defina a altura que deseja para o espaço rolável */
+}
+
+.center {
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+
+.botao-perfil {
+  height: 60px;
+  width: 240px;
+  border-radius: 3px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  background-color: #c3c3c3;
+  color: #fff;
+  align-items: center;
 }
