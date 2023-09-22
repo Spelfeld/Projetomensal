@@ -241,6 +241,7 @@ th {
 th {
   border: 1px solid #ddd !important;
   padding: 8px !important;
+  background-color: #ddd !important;
 }
 
 .tabela tr:hover {
