@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <div id="preloader"></div>
     <header>
       <div class="header">
         <div class="header-left">
@@ -75,5 +76,11 @@
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="js/bootstrap/bootstrap.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+            loader.style.display = "none";
+      })
+    </script>
   </body>
 </html>

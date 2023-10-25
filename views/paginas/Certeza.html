@@ -40,8 +40,8 @@
     </header>
     <main>
       <div class="pagelistar">
-        <form method="POST" class="formLogin">
-          <h1>Numeros de Serie</h1>
+        <form method="POST" class="formLogin" id="meuFormulario">
+          <h1>Você Selecionou:</h1>
           <table class="table table-hover table-dark">
             <thead>
               <tr>
@@ -49,7 +49,6 @@
                 <th scope="col">Nome</th>
                 <th scope="col">N° de Registro</th>
                 <th scope="col">Email</th>
-                <th scope="col">Ações</th>
               </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -59,46 +58,19 @@
                 <td>Zezinho da Silva</td>
                 <td>54575</td>
                 <td>zezinho@email.com</td>
-                <td><a href="Certeza.html" class="delete-button">Excluir</a></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>João Ciclano</td>
-                <td>45321</td>
-                <td>jaociclano@email.com</td>
-                <td><button class="delete-button">Excluir</button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Luis Coradi</td>
-                <td>92187</td>
-                <td>luiscoradi@email.com</td>
-                <td><button class="delete-button">Excluir</button></td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Debi Loide</td>
-                <td>86757</td>
-                <td>Debi@email.com</td>
-                <td><button class="delete-button">Excluir</button></td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Rei Salomão</td>
-                <td>53623</td>
-                <td>Salomao@email.com</td>
-                <td><button class="delete-button">Excluir</button></td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Homer Simpson</td>
-                <td>54354</td>
-                <td>homer@email.com</td>
-                <td><button class="delete-button">Excluir</button></td>
               </tr>
             </tbody>
           </table>
+          <input type="submit" value="Excluir" class="btn" id="botaoDescartar">
         </form>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="fecharModal">&times;</span>
+            <p id="mensagemModal">Ação concluída com sucesso</p>
+            <button id="botaoVoltar" class="botao-menu text-nowrap">Voltar</button>
+          </div>
+        </div>
+        <script src="../js/script.js"></script>
       </div>
     </main>
     <footer class="footer">
@@ -113,11 +85,13 @@
       </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
-    <script>
-      var loader = document.getElementById("preloader");
-      window.addEventListener("load", function() {
-        loader.style.display = "none";
-      });
-    </script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <!-- Script para tornar as linhas clicáveis -->
+      <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+              loader.style.display = "none";
+        })
+      </script>
   </body>
 </html>
