@@ -26,11 +26,12 @@
   </head>
 
   <body>
+    <div id="preloader"></div>
     <header>
       <div class="header">
         <div class="header-left">
           <img src="/views/img/lighting.png" class="logo-empresa" />
-          <h1 class="nome-empresa">EMPRESA PLACEHOLDER</h1>
+          <h1 class="nome-empresa">MaterialMaster</h1>
         </div>
         <div class="header-right">
           <a href="/views/paginas/MainMenu.html" class="retorno-header"> RETORNAR </a>
@@ -38,6 +39,7 @@
       </div>
     </header>
     <main>
+     <div class="body-re">
       <div class="pagelistar">
         <form method="POST" class="formLogin">
           <h1>Numeros de Serie</h1>
@@ -58,7 +60,7 @@
                 <td>Zezinho da Silva</td>
                 <td>54575</td>
                 <td>zezinho@email.com</td>
-                <td><button class="delete-button">Excluir</button></td>
+                <td><a href="Certeza.html" class="delete-button">Excluir</a></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
@@ -99,6 +101,7 @@
           </table>
         </form>
       </div>
+    </div>
     </main>
     <footer class="footer">
       <div class="footer-text">
@@ -112,19 +115,10 @@
       </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="js/bootstrap/bootstrap.js"></script>
-    <!-- Script para tornar as linhas clicáveis -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const rows = document.querySelectorAll(".clickable-row");
-        rows.forEach(function (row) {
-          row.addEventListener("click", function () {
-            const href = row.getAttribute("data-href");
-            if (href) {
-              window.location.href = href;
-            }
-          });
-        });
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function() {
+        loader.style.display = "none";
       });
     </script>
   </body>

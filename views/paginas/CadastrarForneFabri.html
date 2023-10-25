@@ -13,11 +13,12 @@
   </head>
 
   <body>
+    <div id="preloader"></div>
     <header>
       <div class="header">
         <div class="header-left">
           <img src="/views/img/lighting.png" class="logo-empresa" />
-          <h1 class="nome-empresa">EMPRESA PLACEHOLDER</h1>
+          <h1 class="nome-empresa">MaterialMaster</h1>
         </div>
         <div class="header-right">
           <a href="/views/paginas/MainMenu.html" class="retorno-header"> RETORNAR </a>
@@ -25,6 +26,7 @@
       </div>
     </header>
     <main>
+      <div class="body-re">
       <div class="page">
         <form method="POST" class="formLogin">
           <h1>Cadastro Fornecedor/Fabricante</h1>
@@ -61,6 +63,7 @@
           <input type="submit" value="Cadastrar" class="btn" />
         </form>
       </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer-text">
@@ -75,5 +78,11 @@
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="js/bootstrap/bootstrap.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+            loader.style.display = "none";
+      })
+    </script>
   </body>
 </html>

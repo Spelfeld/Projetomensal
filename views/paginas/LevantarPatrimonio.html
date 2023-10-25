@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>Levantar Patrimônio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="../css/bootstrap/bootstrap.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="header-left">
+        <img src="../img/lighting.png" class="logo-empresa">
+        <h1 class="nome-empresa">MaterialMaster</h1>
+      </div>
+      <div class="header-right">
+      </div>
+    </div>
+  </header>
+
+  <style>
+    /* Estilo para o container principal */
+    .formlogin {
+      text-align: center;
+      padding: 80px;
+    }
+
+    /* Estilo para o título */
+    h1 {
+      font-size: 50px;
+    }
+
+    .page-button {
+      border: 3px solid #000;
+      padding: 10px 10px;
+      margin: 10px;
+      padding-top: 7px;
+      padding-bottom: 8px;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: left;
+    }
+  </style>
+
+  <main>
+    <div class="body-re">
+      <div class="pagelistar">
+        <form method="POST" class="formLogin">
+            <h1>Levantar Patrimônio</h1>
+          <div id="optionsPage1">
+            <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col"># Codigo</th>
+                  <th scope="col">Nome</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">1</a></th>
+                  <td>Sala A</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</a></th>
+                  <td>Sala B</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</a></th>
+                  <td>Saguão A</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</a></th>
+                  <td>Sala Multimídia</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">5</a></th>
+                  <td>Sala C</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              <style>
+                h4 {
+                  text-align: center;
+                }
+              </style>
+              <h4>Página 1</h4>
+            </div>
+          </div>
+
+          <div id="optionsPage2" style="display: none;">
+            <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col"># Codigo</th>
+                  <th scope="col">Nome</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">6</a></th>
+                  <td>Sala D</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">7</a></th>
+                  <td>Sala E</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">8</a></th>
+                  <td>Sala F</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">9</a></th>
+                  <td>Sala G</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">10</a></th>
+                  <td>Sala H</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              <style>
+                h4 {
+                  text-align: center;
+                }
+              </style>
+              <h4>Página 2</h4>
+            </div>
+          </div>
+
+          <div id="pagination">
+            <span class="page-button" id="page1Button" onclick="showPage(1)">1</span>
+            <span class="page-button" id="page2Button" onclick="showPage(2)">2</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>&copy; 2023 - Todos os direitos reservados</p>
+      <p>Entre em contato pelo e-mail: contato@exemplo.com</p>
+      <nav>
+        <p><a>Termos de uso</a></p>
+        <p><a>Política de privacidade</a></p>
+        <p><a>Sobre nós</a></p>
+      </nav>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="js/bootstrap/bootstrap.js"></script>
+  <script>
+    function showPage(page) {
+        const page1 = document.getElementById("optionsPage1");
+        const page2 = document.getElementById("optionsPage2");
+        const page1Button = document.getElementById("page1Button");
+        const page2Button = document.getElementById("page2Button");
+
+        if (page === 1) {
+            page1.style.display = "block";
+            page2.style.display = "none";
+            page1Button.style.border = "3px solid #000";
+            page2Button.style.border = "1px solid #000";
+        } else {
+            page1.style.display = "none";
+            page2.style.display = "block";
+            page1Button.style.border = "1px solid #000";
+            page2Button.style.border = "3px solid #000";
+        }
+    }
+
+    function redirectToUrl(url) {
+        window.location.href = url;
+    }
+
+    const clickableRows = document.querySelectorAll(".clickable-row");
+
+    clickableRows.forEach(row => {
+        row.addEventListener("click", () => {
+            const href = row.getAttribute("data-href");
+            if (href) {
+                redirectToUrl(href);
+            }
+        });
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    searchButton.addEventListener("click", () => {
+        const searchValue = searchInput.value.toLowerCase();
+        const options1 = page1.querySelectorAll("tr");
+        const options2 = page2.querySelectorAll("tr");
+
+        options1.forEach(option => {
+            const optionText = option.textContent.toLowerCase();
+            option.style.display = optionText.includes(searchValue) ? "table-row" : "none";
+        });
+
+        options2.forEach(option => {
+            const optionText = option.textContent.toLowerCase();
+            option.style.display = optionText.includes(searchValue) ? "table-row" : "none";
+        });
+    });
+</script>
+</body>
+
+</html>
