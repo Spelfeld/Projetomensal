@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Listar Usuarios</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+      /* Adicione um estilo para os botões de exclusão */
+      .delete-button {
+        background-color: #ff6b6b;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      /* Adicione estilo para linhas clicáveis */
+      .clickable-row {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="preloader"></div>
+    <header>
+      <div class="header">
+        <div class="header-left">
+          <img src="/views/img/lighting.png" class="logo-empresa" />
+          <h1 class="nome-empresa">EMPRESA PLACEHOLDER</h1>
+        </div>
+        <div class="header-right">
+          <a href="/views/paginas/MainMenu.html" class="retorno-header"> RETORNAR </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="pagelistar">
+        <form method="POST" class="formLogin" id="meuFormulario">
+          <h1>Você Selecionou:</h1>
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">N° de Registro</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <!-- Transforme a linha do Zezinho da Silva em uma linha clicável -->
+              <tr class="clickable-row" data-href="GerenciamentoUsuario2.html">
+                <th scope="row">1</th>
+                <td>Zezinho da Silva</td>
+                <td>54575</td>
+                <td>zezinho@email.com</td>
+              </tr>
+            </tbody>
+          </table>
+          <input type="submit" value="Excluir" class="btn" id="botaoDescartar">
+        </form>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="fecharModal">&times;</span>
+            <p id="mensagemModal">Ação concluída com sucesso</p>
+            <button id="botaoVoltar" class="botao-menu text-nowrap">Voltar</button>
+          </div>
+        </div>
+        <script src="../js/script.js"></script>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-text">
+        <p>&copy; 2023 - Todos os direitos reservados</p>
+        <p>Entre em contato pelo e-mail: contato@exemplo.com</p>
+        <nav>
+          <p><a>Termos de uso</a></p>
+          <p><a>Política de privacidade</a></p>
+          <p><a>Sobre nós</a></p>
+        </nav>
+      </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <!-- Script para tornar as linhas clicáveis -->
+      <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+              loader.style.display = "none";
+        })
+      </script>
+  </body>
+</html>

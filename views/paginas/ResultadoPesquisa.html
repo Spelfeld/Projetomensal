@@ -25,14 +25,15 @@
 </head>
 
 <body>
+  <div id="preloader"></div>
   <header>
     <div class="header">
       <div class="header-left">
-        <img src="../img/lighting.png" class="logo-empresa" />
+        <img src="/views/img/lighting.png" class="logo-empresa">
         <h1 class="nome-empresa">MaterialMaster</h1>
-      
+      </div>
       <div class="header-right">
-        <a href="MainMenu.html" class="botao-retornar"> RETORNAR </a>
+        <a href="/views/paginas/GerenciamentoPatrimonio.html" class="retorno-header"> RETORNAR </a>
       </div>
     </div>
   </header>
@@ -91,6 +92,12 @@
       });
     })
   </script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+            loader.style.display = "none";
+      })
+    </script>
 </body>
 
 </html>

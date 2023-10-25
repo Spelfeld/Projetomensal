@@ -13,21 +13,23 @@
   </head>
 
   <body>
+    <div id="preloader"></div>
     <header>
       <div class="header">
         <div class="header-left">
-          <img src="../img/lighting.png" class="logo-empresa" />
+          <img src="/views/img/lighting.png" class="logo-empresa" />
           <h1 class="nome-empresa">MaterialMaster</h1>
-        
+        </div>
         <div class="header-right">
-          <a href="MainMenu.html" class="botao-retornar"> RETORNAR </a>
+          <a href="/views/paginas/MenuPatrimonio.html" class="retorno-header"> RETORNAR </a>
         </div>
       </div>
     </header>
     <main>
       <div class="body-re">
       <div class="page">
-        <form method="POST" class="formLogin">
+        <form method="get" class="formLogin" action="/views/paginas/GerarNumeros.html"> 
+
           <h1>Cadastro Patrimonio</h1>
           <p>Digite os dados de patrimonio no campo abaixo.</p>
           <label for="name"> Nome </label>
@@ -52,14 +54,11 @@
             placeholder="Digite a quantidade"
             autofocus="true"
           />
-          <form action="/views/paginas/GerarNumeros.html">
-            <input type="submit" value="Cadastrar" class="btn" />
-          </form>
+          <input type="submit" value="Cadastrar">
         </form>
       </div>
       </div>
     </main>
-
     <footer class="footer">
       <div class="footer-text">
         <p>&copy; 2023 - Todos os direitos reservados</p>
@@ -73,5 +72,12 @@
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="js/bootstrap/bootstrap.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+            loader.style.display = "none";
+      })
+    </script>
+
   </body>
 </html>

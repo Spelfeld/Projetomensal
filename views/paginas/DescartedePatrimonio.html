@@ -11,33 +11,40 @@
 </head>
 
 <body>
+  <div id="preloader"></div>
   <header>
     <div class="header">
       <div class="header-left">
-        <img src="../img/lighting.png" class="logo-empresa" />
+        <img src="/views/img/lighting.png" class="logo-empresa">
         <h1 class="nome-empresa">MaterialMaster</h1>
-      
+      </div>
       <div class="header-right">
-        <a href="MainMenu.html" class="botao-retornar"> RETORNAR </a>
+        <a href="/views/paginas/GerenciamentoPatrimonio.html" class="retorno-header"> RETORNAR </a>
       </div>
     </div>
   </header>
   <main>
-<div class="body-re">
+  <div class="body-re">
     <div class="page">
-      <form method="POST" class="formLogin">
-          <h1>Descarte e Baixa de Patrimonio</h1>
-          <p>Digite os dados de patrimonio no campo abaixo.</p>
-          <label for="name"> Nome </label>
-          <input type="name" placeholder="Digite o nome" autofocus="true" />
-          <label for="number"> N° de Serie </label>
-          <input type="email" placeholder="Digite o numero de serie" autofocus="true" />
-          <form action="/views/paginas/GerarNumeros.html">
-          <input type="submit" value="Descartar" class="btn" />
-        </form>
+      <form method="POST" class="formLogin" id="meuFormulario">
+        <h1>Descarte e Baixa de Patrimônio</h1>
+        <p>Digite os dados do patrimônio nos campos abaixo.</p>
+        <label for="name">Nome</label>
+        <input type="text" name="name" placeholder="Digite o nome" autofocus="true" />
+        <label for="number">N° de Série</label>
+        <input type="text" name="number" placeholder="Digite o número de série" />
+        <input type="submit" value="Descartar" class="btn" id="botaoDescartar">
       </form>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="fecharModal">&times;</span>
+          <p id="mensagemModal">Ação concluída com sucesso</p>
+          <button id="botaoVoltar" class="botao-menu text-nowrap">Voltar</button>
+        </div>
+      </div>
+      <script src="../js/script.js"></script>
     </div>
-  </div>
+   </div> 
   </main>
   <footer class= "footer">
     <div class = "footer-text">
@@ -52,6 +59,12 @@
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="js/bootstrap/bootstrap.js"></script>
+  <script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+          loader.style.display = "none";
+    })
+  </script>
 </body>
 
 </html>
