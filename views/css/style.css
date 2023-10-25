@@ -239,9 +239,9 @@ th {
 
 .tabela td,
 th {
-  border: 1px solid #ddd !important;
+  border: 1px solid #ddd ;
   padding: 8px !important;
-  background-color: #ddd !important;
+  background-color: #ddd ;
 }
 
 .tabela tr:hover {
@@ -297,3 +297,40 @@ th {
   color: #fff;
   align-items: center;
 }
+
+#preloader{
+  background: #000 url(../img/loader.gif) no-repeat center center;
+  background-size: 6%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%; /* Centraliza horizontalmente */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translate(-50%, -50%);
+  width: 300px; /* Largura desejada */
+  max-width: 80%; /* Largura máxima */
+  max-height: 80vh; /* Altura máxima */
+  background-color: transparent; /* Alterado para uma cor de fundo transparente */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+

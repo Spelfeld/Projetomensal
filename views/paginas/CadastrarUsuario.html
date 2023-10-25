@@ -13,6 +13,8 @@
   </head>
 
   <body>
+
+    <div id="preloader"></div>
     <header>
       <div class="header">
         <div class="header-left">
@@ -26,35 +28,32 @@
     </header>
     <main>
       <div class="page">
-        <form method="POST" class="formLogin">
+        <form method="POST" class="formLogin" id="meuFormulario">
+
           <h1>Cadastro</h1>
           <p>Digite os dados de acesso no campo abaixo.</p>
           <label for="name"> Nome </label>
           <input type="name" placeholder="Digite o nome" autofocus="true" />
           <label for="email"> Nº Registro </label>
-          <input
-            type="email"
-            placeholder="Digite seu número de registro"
-            autofocus="true"
-          />
+          <input type="email" placeholder="Digite seu número de registro" autofocus="true" />
           <label for="email"> Email </label>
           <input type="email" placeholder="Digite seu email" autofocus="true" />
           <label for="number"> Numero </label>
-          <input
-            type="number"
-            placeholder="Digite seu número celular"
-            autofocus="true"
-          />
+          <input type="number" placeholder="Digite seu número celular" autofocus="true" />
           <label for="email"> Endereço </label>
-          <input
-            type="email"
-            placeholder="Digite o endereço"
-            autofocus="true"
-          />
+          <input type="email" placeholder="Digite o endereço" autofocus="true" />
           <label for="password">Senha</label>
           <input type="password" placeholder="Digite sua senha" />
           <input type="submit" value="Cadastrar" class="btn" />
         </form>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="fecharModal">&times;</span>
+            <p id="mensagemModal">Ação concluída com sucesso</p>
+            <button id="botaoVoltar" class="botao-menu text-nowrap">Voltar</button>
+          </div>
+        </div>
+        <script src="../js/script.js"></script>
       </div>
     </main>
     <footer class="footer">
@@ -70,5 +69,12 @@
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="js/bootstrap/bootstrap.js"></script>
+
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+            loader.style.display = "none";
+      })
+    </script>
   </body>
 </html>
