@@ -25,15 +25,14 @@
 </head>
 
 <body>
-  <div id="preloader"></div>
   <header>
     <div class="header">
       <div class="header-left">
-        <img src="/views/img/lighting.png" class="logo-empresa">
-        <h1 class="nome-empresa"> EMPRESA PLACEHOLDER </h1>
-      </div>
+        <img src="../img/lighting.png" class="logo-empresa" />
+        <h1 class="nome-empresa">MaterialMaster</h1>
+      
       <div class="header-right">
-        <a href="/views/paginas/MainMenu.html" class="retorno-header"> RETORNAR </a>
+        <a href="MainMenu.html" class="botao-retornar"> RETORNAR </a>
       </div>
     </div>
   </header>
@@ -41,38 +40,27 @@
     <div class="pagelistar">
       <form method="POST" class="formLogin">
         <h1>Gerenciamento de Bens</h1>
-        
-        <!-- Caixa de busca -->
-        <div class="form-group">
-          <label for="searchInput">Buscar:</label>
-          <input type="text" class="form-control" id="searchInput" placeholder="Digite sua busca">
-        </div>
-        <button type="button" class="btn btn-primary" id="searchButton">Pesquisar</button>
-
         <table class="table table-hover table-dark">
           <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nome</th>
-            </tr>
-          </thead>
-          <tbody class="table-group-divider">
-            <tr class="clickable-row" data-href="/views/paginas/salaAexemplo.html">
-              <th scope="row">1</th>
-              <td>Sala A</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Sala B</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Saguão A</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Sala Multimídia</td>
-            </tr>
+            <tr class="clickable-row" data-href="/views/paginas/DescartedePatrimonio.html">
+                <th scope="row">1</th>
+                <td>Cadeira</td>
+                <td>64764</td>
+                <td>Quebrada</td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>Cadeira</td>
+                  <td>95734</td>
+                  <td>Funcional</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Mesa</td>
+                  <td>96546</td>
+                  <td>Funcional</td>
+                </tr>
+
           </tbody>
         </table>
       </form>
@@ -103,23 +91,8 @@
           }
         });
       });
-
-      // Adicionar ação ao botão de pesquisa
-      const searchButton = document.getElementById("searchButton");
-      searchButton.addEventListener("click", function () {
-        const searchInput = document.getElementById("searchInput").value;
-        // Redirecionar para a página HTML desejada
-        window.location.href = "ResultadoPesquisa.html?query=" + encodeURIComponent(searchInput);
-      });
     });
   </script>
-
-    <script>
-      var loader = document.getElementById("preloader");
-      window.addEventListener("load", function(){
-            loader.style.display = "none";
-      })
-    </script>
 </body>
 
 </html>

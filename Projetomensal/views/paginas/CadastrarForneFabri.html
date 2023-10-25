@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Cadastro de Patrimonio</title>
+    <title>Cadastro de Fornecedor/Fabricante</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -13,46 +13,52 @@
   </head>
 
   <body>
-    <div id="preloader"></div>
     <header>
       <div class="header">
         <div class="header-left">
-          <img src="/views/img/lighting.png" class="logo-empresa" />
-          <h1 class="nome-empresa">EMPRESA PLACEHOLDER</h1>
-        </div>
+          <img src="../img/lighting.png" class="logo-empresa" />
+          <h1 class="nome-empresa">MaterialMaster</h1>
+        
         <div class="header-right">
-          <a href="/views/paginas/MenuPatrimonio.html" class="retorno-header"> RETORNAR </a>
+          <a href="MainMenu.html" class="botao-retornar"> RETORNAR </a>
         </div>
       </div>
     </header>
     <main>
       <div class="page">
-        <form method="get" class="formLogin" action="/views/paginas/GerarNumeros.html"> 
-          <h1>Cadastro Patrimonio</h1>
-          <p>Digite os dados de patrimonio no campo abaixo.</p>
-          <label for="name"> Nome </label>
+        <form method="POST" class="formLogin">
+          <h1>Cadastro Fornecedor/Fabricante</h1>
+          <p>Digite os dados de Forncedor/Fabricante no campo abaixo.</p>
+          <label for="name"> Tipo </label>
+          <input list="Tipo" name="Tipo" />
+          <datalist id="Tipo">
+            <option value="Fornecedor"></option>
+            <option value="Fabricante"></option>
+          </datalist>
+
+          <label for="name"> Nome da Empresa </label>
           <input type="name" placeholder="Digite o nome" autofocus="true" />
-          <label for="email"> Categoria </label>
+          <label for="number"> Nº de Contato </label>
+          <input
+            type="number"
+            placeholder="Digite o número de contato"
+            autofocus="true"
+          />
+          <label for="name"> Endereço </label>
+          <input type="name" placeholder="Digite o enredeço" autofocus="true" />
+          <label for="number"> Nome do Responsavel </label>
+          <input
+            type="number"
+            placeholder="Digite o nome do responsavel"
+            autofocus="true"
+          />
+          <label for="email"> Descrição </label>
           <input
             type="email"
-            placeholder="Digite a categoria"
+            placeholder="Digite uma descrição"
             autofocus="true"
           />
-          <label for="date"> Data </label>
-          <input
-            type="date"
-            placeholder="Digite a data de aquisição"
-            autofocus="true"
-          />
-          <label for="number"> Valor </label>
-          <input type="number" placeholder="Digite o preço" autofocus="true" />
-          <label for="email"> Quantidade </label>
-          <input
-            type="email"
-            placeholder="Digite a quantidade"
-            autofocus="true"
-          />
-          <input type="submit" value="Cadastrar">
+          <input type="submit" value="Cadastrar" class="btn" />
         </form>
       </div>
     </main>
@@ -69,12 +75,5 @@
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="js/bootstrap/bootstrap.js"></script>
-    <script>
-      var loader = document.getElementById("preloader");
-      window.addEventListener("load", function(){
-            loader.style.display = "none";
-      })
-    </script>
-
   </body>
 </html>
