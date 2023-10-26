@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Cadastro de Patrimonio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+  initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="preloader"></div>
+    <header>
+      <div class="header">
+        <div class="header-left">
+          <img src="/views/img/lighting.png" class="logo-empresa">
+          <h1 class="nome-empresa">MaterialMaster</h1>
+        
+        <div class="header-right">
+          <a href="MenuPatrimonio.html" class="botao-retornar"> RETORNAR </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="body-re">
+      <div class="page">
+        <form method="get" class="formLogin" action="/views/paginas/GerarNumeros.html"> 
+
+          <h1>Cadastro Patrimonio</h1>
+          <p>Digite os dados de patrimonio no campo abaixo.</p>
+          <label for="name"> Nome </label>
+          <input type="name" placeholder="Digite o nome" autofocus="true" />
+          <label for="email"> Categoria </label>
+          <input
+            type="email"
+            placeholder="Digite a categoria"
+            autofocus="true"
+          />
+          <label for="date"> Data </label>
+          <input
+            type="date"
+            placeholder="Digite a data de aquisição"
+            autofocus="true"
+          />
+          <label for="number"> Valor </label>
+          <input type="number" placeholder="Digite o preço" autofocus="true" />
+          <label for="email"> Quantidade </label>
+          <input
+            type="email"
+            placeholder="Digite a quantidade"
+            autofocus="true"
+          />
+          <input type="submit" value="Cadastrar">
+        </form>
+      </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-text">
+        <p>&copy; 2023 - Todos os direitos reservados</p>
+        <p>Entre em contato pelo e-mail: contato@exemplo.com</p>
+        <nav>
+          <p><a>Termos de uso</a></p>
+          <p><a>Política de privacidade</a></p>
+          <p><a>Sobre nós</a></p>
+        </nav>
+      </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+            loader.style.display = "none";
+      })
+    </script>
+
+  </body>
+</html>
